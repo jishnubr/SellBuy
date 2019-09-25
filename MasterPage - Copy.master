@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage - Copy.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <!-- ============ Add custom CSS here ============ -->
+    <!-- =<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />-->
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 10%;
+        }
+        .auto-style2 {
+            height: 80%;
+            width: 10px;
+        }
+        a:hover 
+{
+    color: #FFCC00;
+    opacity:90;
+    background-color:#3399FF;
+}
+input
+{
+     background-color: rgba(240, 176, 242, 0.10);
+    opacity:90;
+}
+    </style>
+
+    <!--  Sizing image -->
+     <link rel="stylesheet" type="text/css" href="css/css/style.css" />
+
+    
+
+</head>
+<body>
+
+    <script src="../js/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+   <script src="../js/jquery.backstretch.js" type="text/javascript"></script>
+     <!--   Sizing image-->
+    <script type="text/javascript">
+        'use strict';
+
+        /* ========================== */
+        /* ::::::: Backstrech ::::::: */
+        /* ========================== */
+        // You may also attach Backstretch to a block-level element
+        $.backstretch(
+        [
+            "img/44.jpg",
+            "img/colorful.jpg",
+            "img/34.jpg",
+            "img/images.jpg"
+        ],
+
+        {
+            duration: 4500,
+            fade: 1500
+        }
+    );
+    </script>
+
+    <form id="form1" runat="server">
+
+    <table style="font-family:Arial">
+        <tr>
+            <td colspan="5" style=" text-align: center" class="auto-style1">
+
+                <h1><asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/img/SellBuy.png" Width="300px" AlternateText="SellBuy" />
+                </h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td   class="auto-style2" colspan="2">
+
+                
+            </td>
+            
+            <td  style="width: 90%; height: 90%;" colspan="3" >
+                <h4>
+                    <asp:LinkButton ID="LinkButton4" runat="server" Width="100px" PostBackUrl="~/Default.aspx" EnableTheming="False" ForeColor="#0033CC" CausesValidation="False" BorderColor="#3399FF" BorderStyle="Groove" style="text-align: center">Home</asp:LinkButton>
+                </h4>
+                <div style="width: 1368px; height: 465px;" >
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1"  runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </div>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="5" style="background-color: #3399ff; text-align: center">
+                <b>Members of Group 2</b>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+
+
+
+
